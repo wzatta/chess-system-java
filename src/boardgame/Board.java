@@ -25,13 +25,19 @@ public class Board {
 		this.columns = columns;
 	}
 	
-//--------------------------------------------
+//-- Cap 184 ------------------------------------------
 	public Piece piece(int row, int column) {
 		return pieces[row][column];
 	}
 	
 	public Piece piec(Position position) {
 		return pieces[position.getRow()][position.getColumn()];
+	}
+	
+//--- Cap 185-------------------------------------------------------
+	public void placePiece(Piece piece, Position position) {
+		pieces[position.getRow()][position.getColumn()] = piece;
+		piece.position = position;
 	}
 	
 }
